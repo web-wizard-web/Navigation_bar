@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Types</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+        background-color: #1a1a1a;
+        padding: 20px;
+        color: aliceblue;
+    }
+    .nav-container {
+        margin-bottom: 40px;
+    } 
+    h2{
+        margin-bottom: 20px;
+    }
+    
+    .nav1{
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        padding: 15px;
+    }
+ .nav1 ul {
+    list-style-type: none;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .nav1 li {
+    margin-right: 250px;
+ }
+
+ .nav1 a {
+    color: black;
+
+    padding: 5px 10px;
+    position: relative;
+
+ }
+ 
+  .nav1 a::after{
+     content :"";
+     position: absolute;
+     height: 3px;
+     width: 100%;
+     bottom:0;
+     left:0; 
+     background-color: blue;
+     transform:scaleX(0) ;
+     transition: 0.8s
+     ease-in-out ;
+  }
+
+ .nav1 .login1 {
+    color: white;
+    background-color: rgb(138, 138, 216);
+ }
+ 
+
+ .nav1 a:hover::after {
+    transform: scaleX(1);
+
+ }
+ .login1:hover{
+   background-color: blue;
+ }
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="nav-container">
+    <h2>Variation 1: Horizontal with underline effect</h2>
+    <nav class="nav1">
+    <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About </a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+        <button class="login1"> Login</button>
+    </nav>
+   
+    
+</div>
+</body>
+</html> 
